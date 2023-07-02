@@ -13,7 +13,7 @@ help:
 .PHONY: build
 ## build: Build Go server code.
 build:
-	go build -o /dev/null ./...
+	go build -o logo2go.exe ./...
 
 ## :
 ## DEPENDENCIES:
@@ -45,7 +45,7 @@ dep-update:
 .PHONY: run
 ## run: Run logo2go.
 run:
-	go run ./cmd/logo2go/...
+	@go run ./cmd/logo2go/... example.logo | gofmt
 
 ## :
 ## TEST:
